@@ -1,0 +1,12 @@
+<tbody>
+    <h3> LISTA DE EMPRESAS EN EL MINISTERIO </h3>
+    <tr *ngFor="let empresa of empresas; let i = index" 
+    [ngClass]="{'list-group-item-sucess': empresa.antiguedad > 6 ,
+'list-group-item-danger' : empresa.antiguedad <= 6}"> 
+
+
+<th scope="row">{{i+1}} </th>
+<td>{{empresa.nombre |uppercase}}</td>
+<td> {{empresa.antiguedad}} </td>
+    </tr>
+</tbody>
